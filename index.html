@@ -4,10 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Makani On The Beach</title>
-  <meta name="description" content="Makani On The Beach is a premium beachfront dining experience in Anjuna, Goa." />
 
   <script src="https://cdn.tailwindcss.com"></script>
-
   <script>
     tailwind.config = {
       theme: {
@@ -30,21 +28,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
   <link rel="icon" type="image/png" href="images/makani.jpg">
 
   <style>
-    :root {
-      --sand: #f3e5dc;
-      --mint: #66d1c0;
-      --ink: #000000;
-      --white: #ffffff;
-    }
-
     body {
       margin: 0;
-      background: var(--sand);
-      color: var(--ink);
+      background: #f3e5dc;
+      color: #000;
       font-family: "Manrope", sans-serif;
     }
 
@@ -56,27 +46,10 @@
       text-wrap: balance;
     }
 
-    .grain {
-      position: relative;
-    }
-
-    .grain::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.08;
-      background-image:
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.7) 0 1px, transparent 1px),
-        radial-gradient(circle at 80% 30%, rgba(0,0,0,0.28) 0 1px, transparent 1px);
-      background-size: 34px 34px, 46px 46px;
-      mix-blend-mode: soft-light;
-    }
-
     .reveal {
       opacity: 0;
-      transform: translateY(26px);
-      transition: opacity 0.9s ease, transform 0.9s ease;
+      transform: translateY(24px);
+      transition: 0.8s ease;
     }
 
     .reveal.show {
@@ -118,10 +91,6 @@
 
 <body class="bg-sand text-ink">
 
-  <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-50 bg-ink px-6 py-4 text-xs font-extrabold uppercase tracking-[0.22em] text-white transition hover:bg-mint hover:text-ink">
-    Book Now
-  </a>
-
   <header class="absolute left-0 top-0 z-40 w-full px-5 py-5 md:px-10">
     <nav class="mx-auto flex max-w-7xl items-center justify-between border-b border-white/30 pb-5 text-white">
       <a href="#" class="display text-3xl font-semibold leading-none">Makani</a>
@@ -134,69 +103,63 @@
         <a href="#find-us" class="line-link">Find Us</a>
       </div>
 
-      <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="hidden border border-white px-5 py-3 text-xs font-extrabold uppercase tracking-[0.2em] transition hover:bg-white hover:text-ink sm:inline-flex">
+      <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="border border-white px-5 py-3 text-xs font-extrabold uppercase tracking-[0.2em] transition hover:bg-white hover:text-ink">
         Reserve
       </a>
     </nav>
   </header>
 
-  <section class="grain relative min-h-screen overflow-hidden bg-ink">
-    <img src="images/Hero.webp" alt="Makani On The Beach" class="absolute inset-0 h-full w-full object-cover opacity-90">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/75"></div>
-    <div class="absolute inset-y-0 left-0 w-full bg-gradient-to-r from-black/70 via-black/20 to-transparent"></div>
+  <section class="relative min-h-screen overflow-hidden bg-ink">
+    <img src="images/Hero.webp" alt="Makani On The Beach" class="absolute inset-0 h-full w-full object-cover">
+    <div class="absolute inset-0 bg-black/55"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/20"></div>
 
-    <div class="relative z-10 mx-auto flex min-h-screen max-w-7xl items-end px-5 pb-10 pt-32 md:px-10 md:pb-14">
-      <div class="grid w-full gap-10 md:grid-cols-[1.15fr_0.85fr] md:items-end">
-        <div class="reveal max-w-4xl text-white">
-          <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.35em] text-mint">Anjuna Beach, Goa</p>
+    <div class="relative z-10 mx-auto flex min-h-screen max-w-7xl items-center px-5 pb-44 pt-28 md:px-10 md:pb-36">
+      <div class="reveal max-w-3xl text-white">
+        <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.35em] text-mint">Anjuna Beach, Goa</p>
 
-          <h1 class="display max-w-4xl text-balance text-6xl font-semibold leading-[0.9] md:text-8xl lg:text-9xl">
-            Dining shaped by sea breeze.
-          </h1>
+        <img src="images/Makani Carousel.png" alt="Makani Logo" class="mb-9 w-48 md:w-64">
 
-          <p class="mt-8 max-w-xl text-base leading-8 text-white/85 md:text-lg">
-            A beachfront restaurant for slow sunsets, crafted cocktails, global plates, and nights that feel effortlessly special.
-          </p>
+        <h1 class="display text-balance text-6xl font-semibold leading-[0.9] md:text-8xl">
+          Beachfront dining, beautifully done.
+        </h1>
 
-          <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-            <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="bg-white px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-ink transition hover:bg-mint">
-              Book A Table
-            </a>
-            <a href="#welcome" class="border border-white/70 px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-white transition hover:bg-white hover:text-ink">
-              Discover Makani
-            </a>
-          </div>
-        </div>
+        <p class="mt-8 max-w-xl text-base leading-8 text-white/85 md:text-lg">
+          A coastal restaurant for slow sunsets, crafted cocktails, global plates, and evenings shaped by the Goa breeze.
+        </p>
 
-        <div class="reveal hidden justify-end md:flex">
-          <div class="max-w-xs border border-white/35 bg-white/10 p-6 text-white backdrop-blur-md">
-            <img src="images/Makani Carousel.png" alt="Makani logo" class="mb-8 w-44">
-            <p class="text-sm leading-7 text-white/85">
-              Luxury dining by the sea, made for intimate dinners, coastal afternoons, and lantern-lit nights.
-            </p>
-          </div>
+        <div class="mt-10 flex flex-col gap-4 sm:flex-row">
+          <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="bg-white px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-ink transition hover:bg-mint">
+            Book A Table
+          </a>
+
+          <a href="#welcome" class="border border-white/70 px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-white transition hover:bg-white hover:text-ink">
+            Explore Makani
+          </a>
         </div>
       </div>
     </div>
-  </section>
 
-  <section class="relative z-20 mx-auto -mt-10 max-w-6xl px-5 md:px-10">
-    <div class="reveal grid border border-black bg-sand md:grid-cols-3">
-      <div class="border-b border-black p-6 md:border-b-0 md:border-r">
-        <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/55">Location</p>
-        <p class="mt-2 text-lg font-bold">Anjuna Beach, Goa</p>
-      </div>
-      <div class="border-b border-black p-6 md:border-b-0 md:border-r">
-        <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/55">Experience</p>
-        <p class="mt-2 text-lg font-bold">Beachfront Dining</p>
-      </div>
-      <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="group flex items-center justify-between bg-mint p-6 text-ink">
-        <div>
-          <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/60">Reservations</p>
-          <p class="mt-2 text-lg font-extrabold">WhatsApp Booking</p>
+    <div class="absolute bottom-0 left-0 right-0 z-20 px-5 pb-6 md:px-10">
+      <div class="mx-auto grid max-w-7xl border border-white/25 bg-white/12 text-white backdrop-blur-md md:grid-cols-3">
+        <div class="border-b border-white/25 p-6 md:border-b-0 md:border-r">
+          <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-mint">Location</p>
+          <p class="mt-2 text-lg font-bold">Anjuna Beach, Goa</p>
         </div>
-        <span class="text-3xl transition group-hover:translate-x-2">→</span>
-      </a>
+
+        <div class="border-b border-white/25 p-6 md:border-b-0 md:border-r">
+          <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-mint">Experience</p>
+          <p class="mt-2 text-lg font-bold">Beachfront Dining</p>
+        </div>
+
+        <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="group flex items-center justify-between bg-mint p-6 text-ink">
+          <div>
+            <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/60">Reservations</p>
+            <p class="mt-2 text-lg font-extrabold">WhatsApp Booking</p>
+          </div>
+          <span class="text-3xl transition group-hover:translate-x-2">→</span>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -229,6 +192,7 @@
         <div class="reveal image-zoom overflow-hidden">
           <img src="images/exceptional.webp" alt="Makani ambience" class="h-[300px] w-full object-cover">
         </div>
+
         <div class="reveal flex min-h-[300px] items-end bg-ink p-8 text-white">
           <div>
             <p class="mb-4 text-xs font-extrabold uppercase tracking-[0.3em] text-mint">By Day And Night</p>
@@ -246,6 +210,7 @@
           <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.32em] text-black/55">Seating Options</p>
           <h2 class="display text-5xl font-semibold leading-none md:text-7xl">Choose your mood.</h2>
         </div>
+
         <p class="max-w-lg text-base leading-8 text-black/65">
           From romantic beachfront corners to breezy open-air pergolas and polished indoor seating.
         </p>
@@ -313,6 +278,7 @@
         <p class="max-w-2xl text-lg leading-8 text-black/70">
           A train of global cuisines: authentic, fresh, and unforgettable. Taste the breeze in every bite.
         </p>
+
         <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="bg-ink px-8 py-4 text-center text-xs font-extrabold uppercase tracking-[0.22em] text-white transition hover:bg-mint hover:text-ink">
           Reserve Now
         </a>
@@ -320,7 +286,7 @@
     </div>
   </section>
 
-  <section class="grain relative min-h-[720px] overflow-hidden bg-ink">
+  <section class="relative min-h-[720px] overflow-hidden bg-ink">
     <img src="images/exceptional.webp" alt="Makani by night" class="absolute inset-0 h-full w-full object-cover opacity-85">
     <div class="absolute inset-0 bg-black/55"></div>
 
@@ -330,6 +296,7 @@
         <h2 class="display text-balance text-6xl font-semibold leading-[0.9] md:text-8xl">
           Stay for the sunset. Remember the night.
         </h2>
+
         <a href="https://wa.me/918691851907" target="_blank" rel="noopener" class="mt-10 inline-flex bg-white px-8 py-4 text-xs font-extrabold uppercase tracking-[0.22em] text-ink transition hover:bg-mint">
           Book Now
         </a>
@@ -344,6 +311,7 @@
           <p class="mb-5 text-xs font-extrabold uppercase tracking-[0.32em] text-black/55">Gallery</p>
           <h2 class="display text-5xl font-semibold leading-none md:text-7xl">Moments at Makani.</h2>
         </div>
+
         <p class="max-w-md text-base leading-8 text-black/65">
           A visual taste of the food, ambience, and beachfront mood.
         </p>
@@ -353,6 +321,7 @@
         <div class="reveal image-zoom overflow-hidden md:col-span-5">
           <img src="images/gallery1.webp" alt="Gallery 1" class="h-[620px] w-full object-cover">
         </div>
+
         <div class="grid gap-5 md:col-span-7">
           <div class="grid gap-5 md:grid-cols-2">
             <div class="reveal image-zoom overflow-hidden">
@@ -362,6 +331,7 @@
               <img src="images/gallery3.webp" alt="Gallery 3" class="h-[300px] w-full object-cover">
             </div>
           </div>
+
           <div class="reveal image-zoom overflow-hidden">
             <img src="images/gallery4.webp" alt="Gallery 4" class="h-[300px] w-full object-cover">
           </div>
@@ -405,6 +375,7 @@
             <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/50">Phone</p>
             <a href="tel:+918691851907" class="mt-2 block text-xl font-extrabold hover:text-black/60">+91 86918 51907</a>
           </div>
+
           <div>
             <p class="text-xs font-extrabold uppercase tracking-[0.25em] text-black/50">Location</p>
             <p class="mt-2 text-xl font-extrabold">Anjuna Beach, India</p>
@@ -418,6 +389,7 @@
 
       <div class="reveal bg-mint p-8 md:p-10">
         <p class="display text-5xl font-semibold leading-none">Plan your visit.</p>
+
         <div class="mt-10 space-y-7 text-sm leading-7">
           <p><strong>Best for:</strong> Date nights, sunset dinners, celebrations, cocktails, and beachfront dining.</p>
           <p><strong>Bookings:</strong> WhatsApp reservations available directly.</p>
